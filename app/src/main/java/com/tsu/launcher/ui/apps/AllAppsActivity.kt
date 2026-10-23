@@ -121,6 +121,7 @@ class AllAppsActivity : AppCompatActivity() {
         super.onDestroy()
     }
 
+    @Suppress("DEPRECATION")
     override fun finish() {
         super.finish()
         overridePendingTransition(0, R.anim.slide_out_down)

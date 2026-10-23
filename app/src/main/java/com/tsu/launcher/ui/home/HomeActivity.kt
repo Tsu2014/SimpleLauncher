@@ -10,6 +10,7 @@ import android.widget.LinearLayout
 import android.widget.PopupMenu
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityOptionsCompat
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.viewpager2.widget.ViewPager2
@@ -242,8 +243,12 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun openAllApps() {
-        startActivity(Intent(this, AllAppsActivity::class.java))
-        overridePendingTransition(R.anim.slide_in_up, 0)
+        val options = ActivityOptionsCompat.makeCustomAnimation(
+            this,
+            R.anim.slide_in_up,
+            R.anim.slide_out_down
+        )
+        startActivity(Intent(this, AllAppsActivity::class.java), options.toBundle())
     }
 
     private fun chooseWallpaper() {
