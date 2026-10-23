@@ -28,20 +28,18 @@ class SwipeGestureContainer @JvmOverloads constructor(
 
     private val listener = object : GestureDetector.SimpleOnGestureListener() {
 
-        override fun onLongPress(e: MotionEvent?) {
+        override fun onLongPress(e: MotionEvent) {
             onLongPress?.invoke()
         }
 
         override fun onFling(
-            e1: MotionEvent?,
-            e2: MotionEvent?,
+            e1: MotionEvent,
+            e2: MotionEvent,
             velocityX: Float,
             velocityY: Float
         ): Boolean {
-            val start = e1 ?: return false
-            val end = e2 ?: return false
-            val dy = end.y - start.y
-            val dx = end.x - start.x
+            val dy = e2.y - e1.y
+            val dx = e2.x - e1.x
             if (abs(dy) < abs(dx) || abs(dy) < minDistance) return false
 
             if (dy < 0) onSwipeUp?.invoke() else onSwipeDown?.invoke()

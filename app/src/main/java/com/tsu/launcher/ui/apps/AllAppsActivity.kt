@@ -1,5 +1,6 @@
 package com.tsu.launcher.ui.apps
 
+import android.content.Intent
 import android.content.IntentFilter
 import android.os.Bundle
 import android.text.Editable

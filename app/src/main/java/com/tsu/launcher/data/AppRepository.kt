@@ -101,7 +101,7 @@ object AppRepository {
         }
 
         apps.forEach { app ->
-            if (result.size >= MAX_DOCK) return
+            if (result.size >= MAX_DOCK) return@forEach
             result.add(app.packageName)
         }
 
