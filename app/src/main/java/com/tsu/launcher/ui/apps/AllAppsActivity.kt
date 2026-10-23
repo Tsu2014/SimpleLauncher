@@ -74,6 +74,8 @@ class AllAppsActivity : AppCompatActivity() {
         }
 
         binding.swipeContainer.onSwipeDown = { finish() }
+        // 列表还能向上滚动时优先滚动列表，滚到顶部后下滑才收起抽屉
+        binding.swipeContainer.childCanScrollVertically = { binding.apps.canScrollVertically(-1) }
         binding.search.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) = Unit
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
