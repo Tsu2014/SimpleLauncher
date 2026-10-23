@@ -1,0 +1,25 @@
+<resources>
+
+    <style name="Theme.SimpleLauncher" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="colorControlNormal">@android:color/white</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    </style>
+
+    <!-- 桌面主页：显示系统壁纸 -->
+    <style name="Theme.SimpleLauncher.Home" parent="Theme.SimpleLauncher">
+        <item name="android:windowShowWallpaper">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <!-- 全部应用抽屉：壁纸之上盖一层蒙版 -->
+    <style name="Theme.SimpleLauncher.AllApps" parent="Theme.SimpleLauncher">
+        <item name="android:windowShowWallpaper">true</item>
+        <item name="android:windowBackground">@drawable/bg_all_apps_scrim</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+</resources>

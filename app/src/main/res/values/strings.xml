@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">SimpleLauncher</string>
+
+    <!-- Home -->
+    <string name="home_empty">桌面上还没有应用\n长按图标可添加到底部 Dock</string>
+    <string name="cd_all_apps">全部应用</string>
+    <string name="action_wallpaper">更换壁纸</string>
+
+    <!-- All apps -->
+    <string name="search_hint">搜索应用</string>
+    <string name="no_match_app">没有找到匹配的应用</string>
+
+    <!-- App menu -->
+    <string name="action_app_info">应用信息</string>
+    <string name="action_uninstall">卸载</string>
+    <string name="action_add_to_dock">添加到 Dock</string>
+    <string name="action_remove_from_dock">从 Dock 移除</string>
+    <string name="dock_is_full">Dock 最多放置 %1$d 个应用</string>
+    <string name="toast_cannot_open">无法打开该应用</string>
+</resources>

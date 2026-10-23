@@ -1,0 +1,10 @@
+<resources>
+    <color name="scrim_start">#F2141620</color>
+    <color name="scrim_end">#F20F1115</color>
+    <color name="search_bar_bg">#33FFFFFF</color>
+    <color name="text_on_wallpaper">#FFFFFF</color>
+    <color name="hint_color">#B3FFFFFF</color>
+    <color name="dot_active">#FFFFFF</color>
+    <color name="dot_inactive">#66FFFFFF</color>
+    <color name="handle_color">#66FFFFFF</color>
+</resources>

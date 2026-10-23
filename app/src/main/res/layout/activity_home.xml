@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tsu.launcher.ui.common.SwipeGestureContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipeContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/home_padding"
+        android:paddingEnd="@dimen/home_padding"
+        android:paddingTop="@dimen/home_padding">
+
+        <!-- 时钟 -->
+        <TextClock
+            android:id="@+id/clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="sans-serif-light"
+            android:format12Hour="h:mm"
+            android:format24Hour="HH:mm"
+            android:includeFontPadding="false"
+            android:shadowColor="#99000000"
+            android:shadowDx="0"
+            android:shadowDy="1"
+            android:shadowRadius="3"
+            android:textAlignment="center"
+            android:textColor="@color/text_on_wallpaper"
+            android:textSize="@dimen/clock_text_size" />
+
+        <TextClock
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:format12Hour="EEEE, M月d日"
+            android:format24Hour="EEEE, M月d日"
+            android:shadowColor="#99000000"
+            android:shadowDx="0"
+            android:shadowDy="1"
+            android:shadowRadius="3"
+            android:textColor="@color/text_on_wallpaper"
+            android:textSize="@dimen/date_text_size" />
+
+        <!-- 桌面分页 -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false" />
+
+            <TextView
+                android:id="@+id/emptyHome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/home_empty"
+                android:textColor="@color/hint_color"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+        <!-- 分页指示器 -->
+        <LinearLayout
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp" />
+
+        <!-- Dock + 抽屉入口 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/dock"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:overScrollMode="never" />
+
+            <ImageButton
+                android:id="@+id/btnAllApps"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/cd_all_apps"
+                android:src="@drawable/ic_apps" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.tsu.launcher.ui.common.SwipeGestureContainer>

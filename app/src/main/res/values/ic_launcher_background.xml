@@ -1,0 +1,4 @@
+<resources>
+    <!-- 自适应图标背景色 -->
+    <color name="ic_launcher_background">#1565C0</color>
+</resources>
